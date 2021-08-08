@@ -57,9 +57,9 @@ public class Main {
         }
         System.out.println("Password: ");
         String password = sc.next();
-        if (!password.equals(currentConsumer.getPassword())) {
-            System.out.println("Wrong password!");
-            return false;
+        while (!password.equals(currentConsumer.getPassword())) {
+            System.out.println("Wrong password! please enter correct password");
+            password = sc.next();
         }
 
         return true;
